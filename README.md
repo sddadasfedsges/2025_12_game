@@ -1,2 +1,2 @@
-# 2025_12_game
-
+#aktīvais game.js
+#jāsakārto html & css
