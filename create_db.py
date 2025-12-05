@@ -1,7 +1,7 @@
 import sqlite3
 
 #izveido db ja nav
-conn = sqlite3.connect('rezultati.db')
+conn = sqlite3.connect('dati.db')
 c = conn.cursor()
 
 #izveido tabulu rezultātiem
@@ -15,3 +15,25 @@ CREATE TABLE IF NOT EXISTS tops (
           )
 
 ''')
+
+ieraksti = [
+    ("Anonīmais", 200, 500, "2020-01-01"),
+    ("Anonīmais", 200, 500, "2020-01-01"),
+    ("Anonīmais", 200, 500, "2020-01-01"),
+    ("Anonīmais", 200, 500, "2020-01-01"),
+    ("Anonīmais", 200, 500, "2020-01-01"),
+    ("Anonīmais", 200, 500, "2020-01-01"),
+    ("Anonīmais", 200, 500, "2020-01-01"),
+    ("Anonīmais", 200, 500, "2020-01-01"),
+    ("Anonīmais", 200, 500, "2020-01-01"),
+    ("Anonīmais", 200, 500, "2020-01-01"),
+]
+
+c.executemany('''
+INSERT INTO rezultati (vards, klikski, laiks, datums)
+VALUES (?, ?, ?, ?)
+''', ieraksti)
+
+#saglabā datus, aizver konekciju
+conn.commit()
+conn.close()
