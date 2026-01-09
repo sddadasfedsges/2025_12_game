@@ -1,6 +1,6 @@
 //no URL iegūst vārdu
 let adrese = window.location.hash.substring(1);
-adrese = decodeURI(adrese.split(',')[0]);
+vards = decodeURI(adrese.split(',')[0]);
 
 
 //mainīgie spēles darbībai
@@ -56,6 +56,30 @@ function veiktGajienu(bloks, emoji) {
                 setTimeout(() => {
                     alert(`Apsveicu, ${vards}! Tu pabeidzi spēli ar ${klikski} klikšķiem!`);
                 }, 500);
+                //-->
+                let rezultats = {
+                    vards: vards,
+                    klikski: klikski,
+                    laiks: laiks,
+                    datums: new Date().toISOString().split('T')[0]
+                };
+
+                //dati uz serveri
+                fetch('pievienot-rezultatu', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json',},
+                    body: JSON.stringify(rezultats)
+                }).then(response => {
+                    if (response.ok) {
+                        console.log('veiksmigi nosutits');
+                        document.location = 'top#'+vards+','+klikski+','+laiks;
+                    } else {
+                        alert('Neizdevās saglabāt rezultātus!');
+                    }
+                    }
+                })
+
+
             }
         
         } else {
