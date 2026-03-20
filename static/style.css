@@ -2,13 +2,16 @@
     width: 600px;
     margin-left: auto;
     margin-right: auto;
-    background: rgb(232, 232, 233);
+    background: rgb(101, 101, 187);
+    border-radius: 10px;
+    padding: 12px;
 }
 
 h1 {
     text-align: center;
-    background: rgb(152, 198, 241);
-    color: rgb(184, 235, 66);
+    background: rgb(155, 144, 255);
+    color: rgb(86, 53, 117);
+    border-radius: 10px;
 }
 
 ul {
@@ -73,4 +76,28 @@ a:active {
     background-color: #007BFF;
     color: rgb(178, 236, 130);
     transform: scale(1.05);
+}
+h3 {
+    text-align: center;
+    color: rgb(63, 27, 97);
+}
+
+body {
+  background-color: rgb(145, 180, 224);
+}
+footer {
+  position: fixed;     
+  bottom: 0;           
+  left: 0;              
+  width: 100%;         
+  background-color: #938fe4;
+  color: white;       
+  padding: 10px 15px;  
+  text-align: left;    
+  box-sizing: border-box; 
+  font-size: 14px;
+  z-index: 1000;        
+}
+h2 {
+    text-align: center;
 }

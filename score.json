@@ -1,5 +1,19 @@
 [
     {
+        "id": 15,
+        "vards": "sdfdsf",
+        "klikski": 20,
+        "laiks": 12,
+        "datums": "2026-02-27"
+    },
+    {
+        "id": 14,
+        "vards": "asd",
+        "klikski": 28,
+        "laiks": 19,
+        "datums": "2026-02-27"
+    },
+    {
         "id": 13,
         "vards": "gg1212",
         "klikski": 28,
@@ -19,19 +33,5 @@
         "klikski": 34,
         "laiks": 30,
         "datums": "2026-02-20"
-    },
-    {
-        "id": 1,
-        "vards": "Anonīmais",
-        "klikski": 200,
-        "laiks": 500,
-        "datums": "2020-01-01"
-    },
-    {
-        "id": 2,
-        "vards": "Anonīmais",
-        "klikski": 200,
-        "laiks": 500,
-        "datums": "2020-01-01"
     }
 ]
